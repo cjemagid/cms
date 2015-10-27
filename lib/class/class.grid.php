@@ -111,7 +111,7 @@ class grid {
                         echo $column['td']($r);
                     } else if ( strpos( $column['td'], '->' )) {
                         $keys = explode('->', $column['td']);
-                        $val = $r[array_shift($keys)];
+                        $val = $r->{array_shift($keys)};
                         foreach ($keys as $key) {
                             if (is_array($val)) $val = $val[$key];
                         }
